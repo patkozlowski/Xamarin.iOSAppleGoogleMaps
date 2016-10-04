@@ -1,15 +1,28 @@
 ﻿<Properties StartupConfiguration="{A78EAC31-8651-4F6B-8800-AB5DCDEBE146}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Main.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="AppDelegate.cs" Line="4" Column="13" />
-      <File FileName="packages/Xam.Plugin.ExternalMaps.3.0.0/readme.txt" Line="1" Column="1" />
+      <File FileName="AppDelegate.cs" Line="6" Column="12" />
       <File FileName="Info.plist" />
-      <File FileName="GoogleMapsViewController.cs" Line="1" Column="1" />
-      <File FileName="AppleMapsViewController.cs" Line="48" Column="6" />
-      <File FileName="Museum.json" Line="1" Column="1" />
+      <File FileName="GoogleMapsViewController.cs" Line="96" Column="5" />
+      <File FileName="AppleMapsViewController.cs" Line="52" Column="22" />
+      <File FileName="Museum.json" Line="21" Column="18" />
       <File FileName="Museum.cs" Line="3" Column="1" />
       <File FileName="Main.cs" Line="12" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AppleGoogleMapsDemo" expanded="True">
+            <Node name="AppleGoogleMapsDemo" expanded="True">
+              <Node name="ComponentReferenceFolder" expanded="True" />
+              <Node name="Packages" expanded="True">
+                <Node name="Newtonsoft.Json" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

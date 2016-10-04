@@ -49,5 +49,10 @@
 	<array>
 		<string>location</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>Custom Property</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

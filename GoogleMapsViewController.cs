@@ -9,6 +9,8 @@ using CoreGraphics;
 using CoreLocation;
 using Plugin.ExternalMaps;
 using Newtonsoft.Json;
+using Parse;
+using System.Collections.Generic;
 
 namespace AppleGoogleMapsDemo
 {
@@ -20,7 +22,9 @@ namespace AppleGoogleMapsDemo
 		{
 
 		}
-		public override void ViewWillAppear(bool animated)
+
+		//Use async when running parse
+		public /*async*/ override void ViewWillAppear(bool animated)
 		{
 
 			base.ViewWillAppear(animated);
@@ -53,10 +57,9 @@ namespace AppleGoogleMapsDemo
 			};
 		}
 
-
-		void AddMuseumMarkers()
+		//Use async when running parse
+		/*async*/ void AddMuseumMarkers()
 		{
-			//TO DO:  Populate from backend i.e. from Parse Server 
 
 			//Populate Museum Markers from Code
 			var artInstituteMarker = new Marker()
@@ -94,6 +97,23 @@ namespace AppleGoogleMapsDemo
 			//		Map = this.mapView
 			//	};
 			//}
+
+			//Populate Museum Markers using Parse Server.  To run, comment out markers above.  You need to create your own instance of Parse Server.  See app delegate.
+
+			//Query class Museum created in Parse Server
+			//ParseQuery<ParseObject> queryMuseums = ParseObject.GetQuery("Museum");
+			//IEnumerable<ParseObject> Museum = await queryMuseums.FindAsync();
+			//foreach (var museum in Museum)
+			//{
+			//	var getAll = new Marker()
+			//	{
+			//		Title = museum.Get<string>("Name"),
+			//		Snippet = museum.Get<string>("Address"),
+			//		Position = new CLLocationCoordinate2D(museum.Get<double>("Latitude"), museum.Get<double>("Longitude")),
+			//		Map = this.mapView
+			//	};
+			//}
+
 		}
 
 

@@ -10,6 +10,7 @@ using Plugin.ExternalMaps;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using Parse;
 
 namespace AppleGoogleMapsDemo
 {
@@ -21,7 +22,8 @@ namespace AppleGoogleMapsDemo
         {
         }
 
-		public override void ViewDidLoad()
+		//Use async when running parse
+		public /*async*/ override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
 			//Request Location
@@ -41,10 +43,9 @@ namespace AppleGoogleMapsDemo
 			//Sets MapviewDelegate to this ViewController
 			mapView.Delegate = new MapViewDelegate(this);
 
-			//Add the annotations
-			//TO DO:  Populate from backend i.e. from Parse Server 
+			//Add the annotations from code
 			mapView.AddAnnotation(new PinAnnotation(new CLLocationCoordinate2D(41.8795845, -87.625902),"The Art Institute of Chicago","111 S Michigan Ave, Chicago, IL 60603"));
- 			mapView.AddAnnotation(new PinAnnotation(new CLLocationCoordinate2D(41.866261, -87.6191692),"The Field Museum","1400 S Lake Shore Dr, Chicago, IL 60605"));
+			mapView.AddAnnotation(new PinAnnotation(new CLLocationCoordinate2D(41.866261, -87.6191692),"The Field Museum","1400 S Lake Shore Dr, Chicago, IL 60605"));
 			mapView.AddAnnotation(new PinAnnotation(new CLLocationCoordinate2D(41.866333, -87.6089716),"Adler Planetarium","Museum Campus, 1300 S Lake Shore Dr, Chicago, IL 60605"));
 
 			//Populate Museum Markers using JSON.NET and Museum Class.  To run, comment out markers above.
@@ -53,6 +54,17 @@ namespace AppleGoogleMapsDemo
 			//foreach (var museum in jsonFile.Museum)
 			//{
 			//	mapView.AddAnnotation(new PinAnnotation(new CLLocationCoordinate2D(museum.Latitude, museum.Longitude), museum.Name, museum.Address));
+			//}
+
+			//Populate Museum Markers using Parse Server.  To run, comment out markers above.  You need to create your own instance of Parse Server.  See app delegate.
+
+			//Query class Museum created in Parse Server
+			//ParseQuery<ParseObject> queryMuseums = ParseObject.GetQuery("Museum");
+
+			//IEnumerable<ParseObject> Museum = await queryMuseums.FindAsync();
+			//foreach (var museum in Museum)
+			//{
+			//	mapView.AddAnnotation(new PinAnnotation(new CLLocationCoordinate2D(museum.Get<double>("Latitude"),museum.Get<double>("Longitude")), museum.Get<string>("Name"), museum.Get<string>("Address")));
 			//}
 
 			centerBarButton.Clicked += (sender, e) =>

@@ -3,6 +3,7 @@
 using Foundation;
 using UIKit;
 using Google.Maps;
+using Parse;
 
 namespace AppleGoogleMapsDemo
 {
@@ -22,6 +23,13 @@ namespace AppleGoogleMapsDemo
 		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 		{
 			MapServices.ProvideAPIKey(MapsApiKey);
+
+			//Uncomment and place in your own parse information here.
+			//ParseClient.Initialize(new ParseClient.Configuration
+			//{
+			//	ApplicationId = "PLACEAPPIDHERE",
+			//	Server = "https://PLACESERVERURLHERE/parse/",
+			//});
 			return true;
 		}
 

@@ -103,6 +103,9 @@
     <Reference Include="Plugin.ExternalMaps">
       <HintPath>packages\Xam.Plugin.ExternalMaps.3.0.0\lib\Xamarin.iOS10\Plugin.ExternalMaps.dll</HintPath>
     </Reference>
+    <Reference Include="Parse.iOS">
+      <HintPath>Components\parse-1.7.0\lib\ios-unified\Parse.iOS.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -147,6 +150,10 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="json.net">
       <Version>7.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="parse">
+      <Version>1.7.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
