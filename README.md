@@ -1,16 +1,16 @@
 # Xamarin.iOSAppleGoogleMaps
 Xamarin.iOS 10 project to see side-to-side the differences between Apple Maps &amp; Google Maps.
 
-Be sure to re-add the Xamarin.Google.iOS.Maps, Xam.Plugin.ExternalMaps Packages, and Newtonsoft.JSON if the solution doesn't restore the packages successfully.
+Ingested data three ways:  Code, JSON File, and using Parse Server (You need to configure your own Parse Server).
+
+Be sure to re-add the Xamarin.Google.iOS.Maps, Xam.Plugin.ExternalMaps Packages, Parse, and Newtonsoft.JSON if the solution doesn't restore the packages successfully.
 
 When selecting an annotation, this will navigate to that location using the External Maps plugin.
-
-Implemented adding annotation in code & from a JSON file.
 
 Use XCode 8 Interface builder if you need to tweak the GUI.
 
 Using Parse Server, create your own Parse Server instance using https://github.com/ParsePlatform/parse-server-example
-(I used Heroku).
+(I used Heroku, and it's free in Dev environments).
 
 Create a "Museum" class and create "Name", "Address", "Latitude", and "Longitude" columns, and input row information for each one.
 
