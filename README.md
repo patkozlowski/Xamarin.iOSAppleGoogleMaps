@@ -10,10 +10,7 @@ When selecting an annotation, this will navigate to that location using the Exte
 Use XCode 8 Interface builder if you need to tweak the GUI.
 
 Using Parse Server, create your own Parse Server instance using https://github.com/ParsePlatform/parse-server-example
-(I used Heroku, and it's free in Dev environments).
-
-Create a "Museum" class and create "Name", "Address", "Latitude", and "Longitude" columns, and input row information for each one.
-
+(I used Heroku, and it's free in Dev environments).  Create a "Museum" class and create "Name", "Address", "Latitude", and "Longitude" columns, and input row information for each one.
 
 ![alt tag](https://cloud.githubusercontent.com/assets/16422288/19059102/be25b570-89a2-11e6-99f5-5f3be3c97296.png)
 
