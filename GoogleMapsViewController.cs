@@ -8,6 +8,7 @@ using Google.Maps;
 using CoreGraphics;
 using CoreLocation;
 using Plugin.ExternalMaps;
+using Newtonsoft.Json;
 
 namespace AppleGoogleMapsDemo
 {
@@ -55,9 +56,9 @@ namespace AppleGoogleMapsDemo
 
 		void AddMuseumMarkers()
 		{
-			//TO DO:  Populate from JSON file OR backend i.e. from Parse Server 
+			//TO DO:  Populate from backend i.e. from Parse Server 
 
-			//Populate Museum Markers  
+			//Populate Museum Markers from Code
 			var artInstituteMarker = new Marker()
 			{
 				Title = "The Art Institute of Chicago",
@@ -79,6 +80,20 @@ namespace AppleGoogleMapsDemo
 				Position = new CLLocationCoordinate2D(41.866333, -87.6089716),
 				Map = this.mapView
 			};
+
+			//Populate Museum Markers using JSON.NET and Museum Class.  To run, comment out markers above.
+
+			//var jsonFile = JsonConvert.DeserializeObject<RootObject>(System.IO.File.ReadAllText("Museum.json"));
+			//foreach (var museum in jsonFile.Museum)
+			//{
+			//	var getAll = new Marker()
+			//	{
+			//		Title = museum.Name,
+			//		Snippet = museum.Address,
+			//		Position = new CLLocationCoordinate2D(museum.Latitude, museum.Longitude),
+			//		Map = this.mapView
+			//	};
+			//}
 		}
 
 

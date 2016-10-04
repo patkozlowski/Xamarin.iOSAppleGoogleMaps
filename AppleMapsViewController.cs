@@ -7,6 +7,9 @@ using UIKit;
 using CoreLocation;
 using MapKit;
 using Plugin.ExternalMaps;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.IO;
 
 namespace AppleGoogleMapsDemo
 {
@@ -39,11 +42,18 @@ namespace AppleGoogleMapsDemo
 			mapView.Delegate = new MapViewDelegate(this);
 
 			//Add the annotations
-			//TO DO:  Populate from JSON file OR backend i.e. from Parse Server 
+			//TO DO:  Populate from backend i.e. from Parse Server 
 			mapView.AddAnnotation(new PinAnnotation(new CLLocationCoordinate2D(41.8795845, -87.625902),"The Art Institute of Chicago","111 S Michigan Ave, Chicago, IL 60603"));
  			mapView.AddAnnotation(new PinAnnotation(new CLLocationCoordinate2D(41.866261, -87.6191692),"The Field Museum","1400 S Lake Shore Dr, Chicago, IL 60605"));
 			mapView.AddAnnotation(new PinAnnotation(new CLLocationCoordinate2D(41.866333, -87.6089716),"Adler Planetarium","Museum Campus, 1300 S Lake Shore Dr, Chicago, IL 60605"));
 
+			//Populate Museum Markers using JSON.NET and Museum Class.  To run, comment out markers above.
+
+			//var jsonFile = JsonConvert.DeserializeObject<RootObject> (System.IO.File.ReadAllText ("Museum.json"));
+			//foreach (var museum in jsonFile.Museum)
+			//{
+			//	mapView.AddAnnotation(new PinAnnotation(new CLLocationCoordinate2D(museum.Latitude, museum.Longitude), museum.Name, museum.Address));
+			//}
 
 			centerBarButton.Clicked += (sender, e) =>
 			{
@@ -112,9 +122,9 @@ namespace AppleGoogleMapsDemo
 			public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotationView view, UIControl control)
 			{
 					//Get Title, Lat, and Long from PinAnnotation and send to CrossExternal Maps Plugin
-					var getCoors = view.Annotation as PinAnnotation;
+					var getCoords = view.Annotation as PinAnnotation;
 					//Navigate to Tapped Location
-					CrossExternalMaps.Current.NavigateTo(getCoors.Title, getCoors.Coordinate.Latitude, getCoors.Coordinate.Longitude, Plugin.ExternalMaps.Abstractions.NavigationType.Driving);
+					CrossExternalMaps.Current.NavigateTo(getCoords.Title, getCoords.Coordinate.Latitude, getCoords.Coordinate.Longitude, Plugin.ExternalMaps.Abstractions.NavigationType.Driving);
 
 			}
 

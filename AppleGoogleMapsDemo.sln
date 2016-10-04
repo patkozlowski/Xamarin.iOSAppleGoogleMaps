@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppleGoogleMapsDemo", "AppleGoogleMapsDemo.csproj", "{A78EAC31-8651-4F6B-8800-AB5DCDEBE146}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{936F210F-BA8C-411F-92F8-281926FE3984}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A78EAC31-8651-4F6B-8800-AB5DCDEBE146}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{A78EAC31-8651-4F6B-8800-AB5DCDEBE146}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{A78EAC31-8651-4F6B-8800-AB5DCDEBE146}.Release|iPhone.ActiveCfg = Release|iPhone
+		{A78EAC31-8651-4F6B-8800-AB5DCDEBE146}.Release|iPhone.Build.0 = Release|iPhone
+		{A78EAC31-8651-4F6B-8800-AB5DCDEBE146}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{A78EAC31-8651-4F6B-8800-AB5DCDEBE146}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{A78EAC31-8651-4F6B-8800-AB5DCDEBE146}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{A78EAC31-8651-4F6B-8800-AB5DCDEBE146}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal

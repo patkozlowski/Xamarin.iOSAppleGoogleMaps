@@ -1,0 +1,24 @@
+{"Museum":
+[
+  {
+    "Name": "The Art Institute of Chicago",
+    "Address": "111 S Michigan Ave, Chicago, IL 60603",
+    "Latitude": 41.8795845,
+    "Longitude": -87.625902
+  },
+  {
+  
+    "Name": "The Field Museum",
+    "Address": "1400 S Lake Shore Dr, Chicago, IL 60605",
+    "Latitude": 41.866261,
+    "Longitude": -87.6191692
+  },
+  {
+  
+    "Name": "Adler Planetarium",
+    "Address": "Museum Campus, 1300 S Lake Shore Dr, Chicago, IL 60605",
+    "Latitude": 41.866333,
+    "Longitude": -87.6089716
+  },
+]
+}
