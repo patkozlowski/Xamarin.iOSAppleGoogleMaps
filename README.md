@@ -7,6 +7,8 @@ When selecting an annotation, this will navigate to that location using the Exte
 
 Implemented adding annotation in code & from a JSON file.
 
+Use XCode 8 Interface builder if you need to tweak the GUI.
+
 TODO: Implement different ways to ingest the location data i.e.load from Parse Server.
 
 <img width="320" alt="screen shot 2016-10-03 at 7 51 00 pm" src="https://cloud.githubusercontent.com/assets/16422288/19059102/be25b570-89a2-11e6-99f5-5f3be3c97296.png">
